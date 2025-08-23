@@ -1,14 +1,10 @@
-import Navbar from "@/components/navbar";
+"use client";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-    return<>
-    <Navbar
-        links={[
-          { href: "/sobre-mim", title: "Sobre Mim" },
-          { href: "/projetos", title: "Projetos" },
-          { href: "/experiencias", title: "Experiências" },
-          { href: "/contatos", title: "Contatos" },
-        ]}
-        className=""
-      ></Navbar></>
+  const router = useRouter();
+
+  router.push("/sobre-mim");
+
+  return <></>;
 }
